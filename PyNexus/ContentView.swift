@@ -11,7 +11,7 @@ struct ContentView: View {
                     Image("Background")
                         .resizable()
                         .scaledToFill()
-                        .opacity(0.7)
+                        .opacity(0.9)
                 )
                 .edgesIgnoringSafeArea(.all)
             
