@@ -6,7 +6,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.deepPurple, .darkPurple]), startPoint: .top, endPoint: .bottom)
-                .opacity(0.6)
+                .opacity(0.7)
                 .overlay(
                     Image("Background")
                         .resizable()
