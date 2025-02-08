@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-import CodeEditor
+
 
 struct ConsoleView: View {
     @State private var ToRun = false
     @State private var codeText: String = "print('Hello, world!')"
-    @State private var theme = CodeEditor.ThemeName.pojoaque
+    //@State private var theme = CodeEditor.ThemeName.pojoaque
     @State public var codeOutput: String = "placeholder"
     
     var body: some View {
@@ -19,13 +19,13 @@ struct ConsoleView: View {
             VStack{
                 HStack{
                     Spacer()
-                    Picker("Theme", selection: $theme) {
-                        ForEach(CodeEditor.availableThemes, id: \.self) { theme in
-                            Text(theme.rawValue.capitalized)
-                                .foregroundColor(.veryLightPurple)
-                                .tag(theme)
-                        }
-                    }
+                    //Picker("Theme", selection: $theme) {
+                      //  ForEach(CodeEditor.availableThemes, id: \.self) { theme in
+                        //    Text(theme.rawValue.capitalized)
+                          //      .foregroundColor(.veryLightPurple)
+                            //    .tag(theme)
+                       // }
+                    //}
                     .pickerStyle(.automatic)
                     .foregroundColor(.veryLightPurple)
                     .background(Color.deepPurple)
@@ -54,10 +54,10 @@ struct ConsoleView: View {
                     Spacer()
                 }
                 
-                CodeEditor(source: $codeText, language: .python, theme: theme, flags: [ .selectable, .editable, .smartIndent ], indentStyle: .softTab(width: 2))
-                    .frame(height: 400)
-                    .cornerRadius(10)
-                    .padding()
+                //CodeEditor(source: $codeText, language: .python, theme: theme, flags: [ .selectable, .editable, .smartIndent ], indentStyle: .softTab(width: 2))
+                  //  .frame(height: 400)
+                    //.cornerRadius(10)
+                    //.padding()
                 
                 
                 Text(codeOutput)
